@@ -1,203 +1,176 @@
-# Vidyodaya School Website
+# Sunrise Universal School Website 🌅
 
-A modern, interactive, and responsive school website built with React, TypeScript, and Tailwind CSS. Designed for Indian schools with a focus on holistic education, innovation, and community values.
+Official website for **Sunrise Universal School** — a modern, interactive, and responsive school platform built with React, TypeScript, and Tailwind CSS.
 
-![Vidyodaya School](public/hero-girl.jpg)
+Designed for Indian schools with a focus on holistic education, innovation, discipline, and community values.
 
-## Features
+![Sunrise Universal School](public/hero-girl.jpg)
 
-### Sections Included
-- **Home**: Hero banner with inspiring tagline, CTAs, highlights, and stats
-- **About Us**: Vision & Mission, educational philosophy, core values
-- **Academics**: Curriculum overview, grade structure, teaching approach, labs
-- **Admissions**: Process timeline, requirements, interactive enquiry form
-- **Campus Life**: Clubs, sports, arts, yoga, community service
-- **News & Notices**: Dynamic notice board with category filters
-- **Gallery**: Image grid with modal lightbox and filters
-- **Contact**: Address, Google Map embed, working contact form
-- **Footer**: Newsletter signup, quick links, social media
+---
 
-### Technical Features
-- Responsive design (mobile-first approach)
-- Smooth scroll animations and transitions
+## ✨ Features
+
+### 📚 Sections Included
+- **Home**: Hero banner with inspiring tagline, CTAs, highlights, and stats  
+- **About Us**: Vision & Mission, philosophy, core values  
+- **Academics**: Curriculum overview, grade structure, teaching approach, labs  
+- **Admissions**: Process timeline, requirements, enquiry form  
+- **Campus Life**: Clubs, sports, arts, yoga, activities  
+- **News & Notices**: CMS-powered notice board with filters  
+- **Gallery**: Image grid with modal preview  
+- **Contact**: Address, Google Map embed, working form  
+- **Footer**: Quick links, social icons, newsletter
+
+---
+
+### ⚙️ Technical Highlights
+- Responsive mobile-first design
+- Smooth scroll animations
 - Interactive forms with validation
-- Image gallery with lightbox
-- Category filtering for news and gallery
-- Accessibility friendly (ARIA labels, keyboard navigation)
-- SEO-ready meta tags
-- Fast loading with optimized assets
+- CMS integration using Sanity
+- Category filtering
+- Accessibility friendly
+- SEO-ready
+- Optimized performance
 
-## Tech Stack
+---
 
-- **Framework**: React 18 + TypeScript
-- **Build Tool**: Vite
-- **Styling**: Tailwind CSS 3.4
-- **UI Components**: shadcn/ui
-- **Icons**: Lucide React
-- **Fonts**: Fraunces (headings), Inter (body)
+## 🧰 Tech Stack
 
-## Getting Started
+- **Framework**: React 18 + TypeScript  
+- **Build Tool**: Vite  
+- **Styling**: Tailwind CSS  
+- **UI Components**: shadcn/ui  
+- **Icons**: Lucide React  
+- **CMS**: Sanity  
+- **Fonts**: Fraunces (Headings), Inter (Body)
+
+---
+
+## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js 18+ 
-- npm or yarn
+- Node.js 18+
+- npm
+
+---
 
 ### Installation
 
-1. Clone the repository or download the project:
-```bash
-cd vidyodaya-school
-```
+1️⃣ Navigate to project:
 
-2. Install dependencies:
 ```bash
+cd sus-website
+2️⃣ Install dependencies:
+
 npm install
-```
+3️⃣ Start development server:
 
-3. Start the development server:
-```bash
 npm run dev
-```
+Open:
 
-4. Open your browser and navigate to `http://localhost:5173`
-
-### Building for Production
-
-```bash
+http://localhost:5173
+📦 Build for Production
 npm run build
-```
+Files will be generated in:
 
-The built files will be in the `dist/` directory.
-
-## Project Structure
-
-```
-├── public/                 # Static assets (images, fonts)
-│   ├── hero-girl.jpg
-│   ├── about-student.jpg
-│   └── ...
+dist/
+📁 Project Structure
+├── public/
+│   ├── hero.jpg
+│   ├── team/
+│   └── gallery/
 ├── src/
-│   ├── sections/          # Page sections
+│   ├── sections/
 │   │   ├── Navigation.tsx
 │   │   ├── Hero.tsx
-│   │   ├── Highlights.tsx
 │   │   ├── About.tsx
-│   │   ├── Programs.tsx
 │   │   ├── Academics.tsx
 │   │   ├── Admissions.tsx
 │   │   ├── CampusLife.tsx
-│   │   ├── Testimonials.tsx
 │   │   ├── NewsNotices.tsx
 │   │   ├── Gallery.tsx
 │   │   ├── Contact.tsx
 │   │   └── Footer.tsx
-│   ├── components/ui/     # shadcn/ui components
-│   ├── App.tsx            # Main app component
-│   ├── index.css          # Global styles
-│   └── main.tsx           # Entry point
+│   ├── sanity.ts
+│   ├── App.tsx
+│   ├── main.tsx
+│   └── index.css
 ├── index.html
 ├── package.json
 ├── tailwind.config.js
-├── tsconfig.json
 └── vite.config.ts
-```
+🎨 Customization
+🎯 Colors
+Edit:
 
-## Customization
-
-### Changing Colors
-Edit the CSS variables in `src/index.css`:
-```css
+src/index.css
 :root {
   --brand-blue: #00457c;
   --brand-orange: #f36b25;
   --brand-dark-blue: #002a5c;
-  /* ... */
 }
-```
+✏️ Content Updates
+Text → src/sections/
 
-### Updating Content
-1. **Text Content**: Edit the respective section files in `src/sections/`
-2. **Images**: Replace images in the `public/` folder
-3. **Contact Info**: Update in `src/sections/Contact.tsx` and `src/sections/Footer.tsx`
+Images → public/
 
-### Adding New Sections
-1. Create a new component in `src/sections/`
-2. Import and add it to `App.tsx`
-3. Add a corresponding navigation link in `Navigation.tsx`
+Contact info → Contact.tsx & Footer.tsx
 
-## Deployment
+➕ Adding Sections
+Create file in src/sections/
 
-### Deploy to Vercel
+Import into App.tsx
 
-1. Install Vercel CLI:
-```bash
+Add nav link in Navigation.tsx
+
+🌍 Deployment
+▶️ Vercel (Recommended)
 npm i -g vercel
-```
-
-2. Deploy:
-```bash
 vercel
-```
+Or connect GitHub → auto deploy.
 
-Or connect your GitHub repository to Vercel for automatic deployments.
-
-### Deploy to Netlify
-
-1. Install Netlify CLI:
-```bash
-npm i -g netlify-cli
-```
-
-2. Build and deploy:
-```bash
+▶️ Netlify
 npm run build
 netlify deploy --prod --dir=dist
-```
+▶️ Manual Hosting
+Upload contents of dist/ to server.
 
-Or drag and drop the `dist/` folder to Netlify's deploy page.
+🌐 Browser Support
+Chrome
 
-### Manual Deployment
+Firefox
 
-1. Build the project:
-```bash
-npm run build
-```
+Edge
 
-2. Upload the contents of the `dist/` folder to your web server.
+Safari
 
-## Browser Support
+♿ Accessibility
+Keyboard navigation
 
-- Chrome 90+
-- Firefox 88+
-- Safari 14+
-- Edge 90+
+ARIA labels
 
-## Accessibility
+Proper contrast
 
-This website follows WCAG 2.1 guidelines:
-- Keyboard navigation support
-- ARIA labels for interactive elements
-- Color contrast compliance
-- Reduced motion support for animations
-- Screen reader friendly
+Reduced motion
 
-## Performance
+Screen-reader friendly
 
-- Lazy loading for images
-- Optimized bundle size
-- CSS animations (GPU accelerated)
-- Minimal JavaScript for interactions
+⚡ Performance
+Lazy loading images
 
-## License
+Optimized builds
 
-This project is created for educational purposes. Feel free to customize and use it for your school.
+Tailwind purge
 
-## Support
+CDN assets
 
-For any questions or issues, please contact:
-- Email: info@vidyodaya.edu.in
-- Phone: +91 98765 43210
+📜 License
+Created for Sunrise Universal School.
+Free to customize and reuse for educational institutions.
 
----
-
-Built with ❤️ for Vidyodaya School
+📞 Contact
+Sunrise Universal School
+📍 Ratlam / Madhya Pradesh
+📧 sus022017@gmail.com
+📞 +91 9109001795, 9329824774
