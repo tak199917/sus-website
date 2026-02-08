@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Calendar, FileText, Phone, CheckCircle, ArrowRight, User, Mail, Phone as PhoneIcon, MessageSquare } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
-import { sanityClient } from '@/sanity';
+
 
 const admissionSteps = [
   {

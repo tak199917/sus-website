@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Sun, BookOpen, Pen, Flower2, Flag, Sparkles, Users, Quote } from 'lucide-react';
+import { Sun, BookOpen, Pen, Flower2, Flag, Sparkles, Quote } from 'lucide-react';
 
 const logoElements = [
   {
