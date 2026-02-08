@@ -104,7 +104,9 @@ export default function Footer() {
               </div>
               <p className="text-white/70 leading-relaxed">
                 Nurturing young minds for a brighter tomorrow. We provide holistic education 
-                that develops academic excellence, character, and creativity.
+                that develops academic excellence, character, and creativity. Join us in shaping the future leaders of the world.
+                <br/><br/>
+                UDISE Code: 23190623770
               </p>
               
               {/* Social Links */}
@@ -125,12 +127,12 @@ export default function Footer() {
               </div>
 
               {/* Contact Info */}
-              <div className="space-y-3 pt-4">
-                <a href="tel:+919876543210" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                 <div className="space-y-3 pt-4">
+                <a href="tel:+919109001795" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                   <Phone className="w-4 h-4" />
                   +91 9109001795, 9329824774
                 </a>
-                <a href="mailto:info@vidyodaya.edu.in" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
+                <a href="sus022017@gmail.com" className="flex items-center gap-3 text-white/70 hover:text-white transition-colors">
                   <Mail className="w-4 h-4" />
                   sus022017@gmail.com
                 </a>

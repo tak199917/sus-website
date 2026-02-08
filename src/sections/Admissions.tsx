@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react';
 import { Calendar, FileText, Phone, CheckCircle, ArrowRight, User, Mail, Phone as PhoneIcon, MessageSquare } from 'lucide-react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } from '@/components/ui/dialog';
+import { sanityClient } from '@/sanity';
 
 const admissionSteps = [
   {
@@ -103,16 +104,37 @@ export default function Admissions() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
-    if (validateForm()) {
-      setDialogMessage('Thank you for your enquiry! Our admissions team will contact you within 24 hours.');
+
+    if (!validateForm()) return;
+
+    try {
+      await fetch('/api/admission', {
+      method: 'POST',
+       headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(formData),
+    });
+
+
+      setDialogMessage(
+        'Thank you for your enquiry! Our admissions team will contact you within 24 hours.'
+      );
+
       setShowDialog(true);
-      setFormData({ name: '', email: '', phone: '', grade: '', message: '' });
+
+      setFormData({
+        name: '',
+        email: '',  
+        phone: '',
+        grade: '',
+        message: '',
+      });
+    } catch (err) {
+      console.error('Admission submit error:', err);
+      alert('Something went wrong. Please try again.');
     }
   };
-
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
